@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gym Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+<!-- Your existing HTML content stays EXACTLY the same -->
+<!-- ================= AUTH ================= -->
+<div id="registerBox" class="auth-box">
+  <h2>Register</h2>
+  <input id="r_username" placeholder="Username">
+  <input id="r_password" type="password" placeholder="Password">
+  <select id="r_role">
+    <option value="">Select Role</option>
+    <option value="user">User</option>
+    <option value="trainer">Trainer</option>
+    <option value="admin">Admin</option>
+  </select>
+  <button onclick="register()">Register</button>
+  <div id="regMsg" class="msg"></div>
+  <div class="switch" onclick="showLogin()">Already have account?</div>
+</div>
+
+<div id="loginBox" class="auth-box hidden">
+  <h2>Login</h2>
+  <input id="l_username" placeholder="Username">
+  <input id="l_password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <div id="logMsg" class="msg"></div>
+  <div class="switch" onclick="showRegister()">Create account</div>
+</div>
+
+<!-- ================= ADMIN ================= -->
+<div id="adminDashboard" class="dashboard hidden">
+  <h2>Admin Dashboard</h2>
+  <div class="card">Welcome <b id="adminName"></b></div>
+
+  <div class="card">
+    <h3>Pending Join Requests</h3>
+    <ul id="adminJoinList"></ul>
+  </div>
+
+  <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<!-- ================= TRAINER ================= -->
+<div id="trainerDashboard" class="dashboard hidden">
+  <h2>Trainer Dashboard</h2>
+  <div class="card">Welcome <b id="trainerName"></b></div>
+
+  <div class="card">
+    <h3>Assigned Users</h3>
+    <ul id="trainerUsers"></ul>
+  </div>
+
+  <div class="card hidden" id="trainerActions">
+    <h3 id="selectedUserTitle"></h3>
+
+    <textarea id="t_workout" placeholder="Workout for today"></textarea>
+    <textarea id="t_diet" placeholder="Diet plan for today"></textarea>
+
+    <select id="t_present">
+      <option value="true">Present</option>
+      <option value="false">Absent</option>
+    </select>
+
+    <button onclick="submitDailyUpdate()">Save Daily Update</button>
+    <p id="trainerMsg"></p>
+  </div>
+
+  <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<!-- ================= USER ================= -->
+<div id="userDashboard" class="dashboard hidden">
+  <h2>User Dashboard</h2>
+  <div class="card">Welcome <b id="userName"></b></div>
+
+  <div class="card" id="joinCard">
+    <h3>Join Gym</h3>
+    <input id="age" placeholder="Age">
+    <input id="height" placeholder="Height">
+    <input id="weight" placeholder="Weight">
+    <input id="gym_type" placeholder="Gym Type">
+    <button onclick="joinGym()">Submit</button>
+    <p id="joinMsg"></p>
+  </div>
+
+  <div class="card">
+    <h3>Status</h3>
+    <p id="statusText"></p>
+    <p id="trainerText"></p>
+  </div>
+
+  <div class="card hidden" id="progressCard">
+    <h3>Daily Progress</h3>
+    <ul id="progressList"></ul>
+  </div>
+
+  <button class="logout" onclick="logout()">Logout</button>
+</div>
+
+<script src="main.js"></script>
+<script>
+    window.onload = function() {
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get("type");
+
+        if (type === "login") {
+            showLogin();
+        } else {
+            showRegister();
+        }
+    }
+</script>
+</body>
+</html>

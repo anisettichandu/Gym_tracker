@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Gym Tracker Pro</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Gym Tracker</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#tracker">Gym Locations</a></li>
+                <li><a href="#user-form">Join</a></li>
+                <li><a href="main.html?type=login">Login</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero fade-in">
+        <div class="hero-content">
+            <h1>Track Your Gains</h1>
+            <p>Professional workout logging with advanced analytics, beautiful design, and seamless mobile experience</p>
+            <a href="#user-form" class="cta-button">U want to Join in My Gym(click Start) <span>→</span></a>
+        </div>
+    </section>
+
+    <!-- Scrolling Text -->
+    <div class="scrolling-text">
+        <div class="marquee-wrapper">
+            <div class="marquee">
+                <span>💪 Track Every Rep • 🔥 Smash Your PRs • 🏆 Level Up Daily • 📈 Real Progress • 💪 Track Every Rep • 🔥 Smash Your PRs • 🏆 Level Up Daily • 📈 Real Progress • </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Gallery -->
+    <section id="gallery" class="image-gallery">
+        <h2 class="section-title fade-in">Fitness Inspiration Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item fade-in">
+                <img src="../backend/images/img1.jpg" alt="Heavy Lifts" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Heavy Lifts</h3>
+                    <p>Push your absolute limits with compound movements</p>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../backend/images/img2.webp" alt="Cardio" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Cardio Zon</h3>
+                    <p>Build endurance and burn fat efficiently</p>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../backend/images/img3.jpg" alt="Yoga" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Mindful Movement</h3>
+                    <p>Perfect your form and flexibility</p>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../backend/images/img4.jpg" alt="Strength" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Strength Training</h3>
+                    <p>Build the foundation of champions</p>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../backend/images/img1.jpg" alt="Modern Gym" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Modern Facility</h3>
+                    <p>World-class equipment awaits</p>
+                </div>
+            </div>
+            <div class="gallery-item fade-in">
+                <img src="../backend/images/img2.webp" alt="Workout" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Get Started</h3>
+                    <p>Your transformation begins now</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <h2 class="section-title">📊 Your Progress Dashboard</h2>
+        <div class="stats-grid" id="stats">
+            <div class="stat-card fade-in">
+                <div class="stat-number" id="total-workouts">0</div>
+                <strong>Total Sessions</strong>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number" id="total-minutes">0</div>
+                <strong>Total Training Time</strong>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number" id="avg-duration">0</div>
+                <strong>Avg Session Length</strong>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number" id="streak">0</div>
+                <strong>🔥 Current Streak</strong>
+            </div>
+        </div>
+    </section>
+
+   <!-- Gym Locations Section -->
+    <section  id="tracker" class="location-section">
+        <div class="container">
+            <h2>Top Gyms in Hyderabad</h2>
+            <p>Find nearby gyms for your tracking sessions.</p>
+            <div class="gym-grid">
+                <!-- Gym 1 -->
+                <div class="gym-card" data-modal="gym1">
+                    <div class="gym-icon">💪</div>
+                    <h3>Cult Fit</h3>
+                    <p>Banjara Hills</p>
+                </div>
+                <!-- Gym 2 -->
+                <div class="gym-card" data-modal="gym2">
+                    <div class="gym-icon">🏋️</div>
+                    <h3>Talwalkars</h3>
+                    <p>Banjara Hills</p>
+                </div>
+                <!-- Gym 3 -->
+                <div class="gym-card" data-modal="gym3">
+                    <div class="gym-icon">🔥</div>
+                    <h3>Gold’s Gym</h3>
+                    <p>Banjara Hills</p>
+                </div>
+                <!-- Gym 4 -->
+                <div class="gym-card" data-modal="gym4">
+                    <div class="gym-icon">⚡</div>
+                    <h3>F45 Training</h3>
+                    <p>Gachibowli</p>
+                </div>
+                <!-- Gym 5 -->
+                <div class="gym-card" data-modal="gym5">
+                    <div class="gym-icon">💥</div>
+                    <h3>Steel Gym</h3>
+                    <p>Jubilee Hills</p>
+                </div>
+                <!-- Gym 6 -->
+                <div class="gym-card" data-modal="gym6">
+                    <div class="gym-icon">🦾</div>
+                    <h3>Kris Gethin Gyms</h3>
+                    <p>Banjara Hills</p>
+                </div>
+                <!-- Gym 7 -->
+                <div class="gym-card" data-modal="gym7">
+                    <div class="gym-icon">🌟</div>
+                    <h3>Pulse 8</h3>
+                    <p>Barkatpura</p>
+                </div>
+                <!-- Gym 8 -->
+                <div class="gym-card" data-modal="gym8">
+                    <div class="gym-icon">🚀</div>
+                    <h3>360 Degrees Gym</h3>
+                    <p>Jubilee Hills</p>
+                </div>
+                <!-- Gym 9 -->
+                <div class="gym-card" data-modal="gym9">
+                    <div class="gym-icon">🥇</div>
+                    <h3>Fitness 9 Gym</h3>
+                    <p>Barkatpura</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals (hidden by default) -->
+        <div id="gym1" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Cult Fit</h3>
+                <p>3rd Floor, Rd Number 1, above AB's Barbecue, Krishe Amethyst, Banjara Hills, Hyderabad, Telangana 500034</p>
+                <p><strong>Phone:</strong> Check cult.fit app</p>
+            </div>
+        </div>
+        <div id="gym2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Talwalkars</h3>
+                <p>Near City Center, No. 8-2, 618/2, 1st & 2nd Floor, Delta Tower, Rd Number 11, Banjara Hills, Hyderabad 500034</p>
+                <p><strong>Phone:</strong> 040 2335 5813</p>
+            </div>
+        </div>
+        <div id="gym3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Gold’s Gym</h3>
+                <p>8-2 701/2, Rd Number 12, Amudi Nagar, Banjara Hills, Hyderabad 500034</p>
+                <p><strong>Phone:</strong> 095504 10111</p>
+            </div>
+        </div>
+        <div id="gym4" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>F45 Training</h3>
+                <p>Plot no 18-20 4th floor, Above Prakash lights, Telecom Nagar, Gachibowli, Hyderabad 500032</p>
+                <p><strong>Phone:</strong> 073060 24545</p>
+            </div>
+        </div>
+        <div id="gym5" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Steel Gym</h3>
+                <p>1355, Neharika Jubilee One, Jubilee Hills Road No.1, Jubilee Hills, Hyderabad 500033</p>
+                <p><strong>Phone:</strong> 095429 99999</p>
+            </div>
+        </div>
+        <div id="gym6" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Kris Gethin Gyms</h3>
+                <p>4th Floor, Jyoti Majestic, Road number 2, Banjara Hills, Hyderabad 500034</p>
+                <p><strong>Phone:</strong> 081213 30777</p>
+            </div>
+        </div>
+        <div id="gym7" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Pulse 8</h3>
+                <p>3rd floor, Yelluka’s Arcade, Barkatpura X road, Hyderabad 500027</p>
+                <p><strong>Phone:</strong> 040 6677 5775</p>
+            </div>
+        </div>
+        <div id="gym8" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>360 Degrees Gym</h3>
+                <p>Croma Building, 2nd Floor, Road Number 36, Jubilee Hills, Hyderabad 500033</p>
+                <p><strong>Phone:</strong> 040 2355 2360</p>
+            </div>
+        </div>
+        <div id="gym9" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Fitness 9 Gym</h3>
+                <p>2nd & 5th Floor, Legend Commercial Complex, Barkatpura, Hyderabad 500027</p>
+                <p><strong>Phone:</strong> 089785 95959</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- GYM TRACKER SECTION -->
+    <section  class="tracker">
+        <h2 class="section-title">💪 Gym Tracker</h2>
+        <div class="tracker-container">
+            <!-- <div class="form-sections"> -->
+                <!-- <h1>Add Gym Member</h1> -->
+                <form id="gymForms">
+                    <!-- <input id="name" placeholder="👤 Full Name" required> -->
+                    <!-- <input id="age" type="number" placeholder="📅 Age" required> -->
+                    <!-- <input id="weight" type="number" step="0.1" placeholder="⚖️ Weight (kg)" required> -->
+                    <!-- <input id="workout" placeholder="💪 Workout Type" required> -->
+ 
+                </form>
+            <!-- </div> -->
+<!-- Gym Subscription Form Section -->
+<!-- Gym Subscription Form Section -->
+<!-- Gym Subscription Form Section -->
+<section class="subscription-section">
+    <div class="sub-container">
+        
+        <!-- Step 1: User Form -->
+        <div class="sub-step active" id="user-form">
+            <div class="step-header">
+                <h2>🎯 Join GymTracker Premium</h2>
+                <p>Fill your details for personalized plan</p>
+                <div class="step-indicator">Step 1/3</div>
+            </div>
+            
+            <form class="user-form">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input  type="text" id="user-name" required >
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input  type="email" id="user-email" required >
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input  type="number" id="user-age" min="16" max="80" required >
+                    </div>
+                    <div class="form-group">
+                        <label>Weight (kg)</label>
+                        <input  type="number" id="user-weight" step="0.1" required >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Gym Type</label>
+                    <select  id="gym-type" required >
+                        <option value="">Select Gym Type</option>
+                        <option value="beginner">Beginner (Basic Equipment)</option>
+                        <option value="intermediate">Intermediate (Weights + Cardio)</option>
+                        <option value="advanced">Advanced (Powerlifting)</option>
+                        <option value="crossfit">CrossFit (Functional Training)</option>
+                        <option value="yoga">Yoga & Pilates</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea  id="user-desc" rows="3" placeholder="Your fitness goals..." ></textarea>
+                </div>
+                <button type="submit" class="sub-btn primary">Next: View Plans →</button>
+            </form>
+        </div>
+
+        <!-- Step 2: Subscription Plans -->
+        <div class="sub-step" id="plans">
+            <div class="step-header">
+                <h2>💰 Choose Your Plan</h2>
+                <p id="user-info"></p>
+                <div class="step-indicator">Step 2/3</div>
+            </div>
+            
+            <div class="plans-grid">
+                <div class="plan-card" data-duration="1" data-price="999">
+                    <div class="plan-badge">Most Popular</div>
+                    <h3>Monthly</h3>
+                    <p class="plan-price">₹999<span>/month</span></p>
+                    <ul class="plan-features">
+                        <li>✅ All Gym Access</li>
+                        <li>✅ Personal Trainer</li>
+                        <li>✅ Nutrition Plan</li>
+                        <li>✅ App Tracking</li>
+                    </ul>
+                    <button class="sub-btn plan-select" data-duration="1">Select Monthly</button>
+                </div>
+                
+                <div class="plan-card popular" data-duration="6" data-price="4999">
+                    <div class="plan-badge">Save 17%</div>
+                    <h3>6 Months</h3>
+                    <p class="plan-price">₹4999<span>/month ₹833</span></p>
+                    <ul class="plan-features">
+                        <li>✅ All Gym Access</li>
+                        <li>✅ Personal Trainer</li>
+                        <li>✅ Nutrition Plan</li>
+                        <li>✅ Free T-Shirt</li>
+                        <li>✅ App Tracking</li>
+                    </ul>
+                    <button class="sub-btn plan-select primary" data-duration="6">Select 6 Months (Popular)</button>
+                </div>
+                
+                <div class="plan-card" data-duration="12" data-price="8999">
+                    <div class="plan-badge">Best Value</div>
+                    <h3>1 Year</h3>
+                    <p class="plan-price">₹8999<span>/year ₹750/month</span></p>
+                    <ul class="plan-features">
+                        <li>✅ All Gym Access</li>
+                        <li>✅ Personal Trainer</li>
+                        <li>✅ Nutrition Plan</li>
+                        <li>✅ Free T-Shirt + Bag</li>
+                        <li>✅ Priority Booking</li>
+                        <li>✅ App Tracking</li>
+                    </ul>
+                    <button class="sub-btn plan-select" data-duration="12">Select Yearly</button>
+                </div>
+            </div>
+            <button class="sub-btn back-btn">← Back</button>
+        </div>
+
+        <!-- Step 3: Payment -->
+        <div class="sub-step" id="payment">
+            <div class="step-header">
+                <h2>💳 Complete Payment</h2>
+                <p id="plan-summary"></p>
+                <div class="step-indicator">Step 3/3</div>
+            </div>
+            
+            <form class="payment-form">
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input  type="text" id="card-number" maxlength="19" placeholder="1234 5678 9012 3456" >
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Expiry</label>
+                        <input  type="text" id="expiry" maxlength="5" placeholder="MM/YY" >
+                    </div>
+                    <div class="form-group">
+                        <label>CVV</label>
+                        <input  type="password" id="cvv" maxlength="3" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Name on Card</label>
+                    <input type="text" id="card-name">
+                </div>
+                <button type="submit" class="sub-btn primary pay-btn">Pay Now ₹<span id="final-amount">0</span></button>
+            </form>
+            <button class="sub-btn back-btn">← Back to Plans</button>
+            <div class="secure-badge">🔒 100% Secure Payment</div>
+        </div>
+
+        <!-- Success Overlay -->
+        <div class="success-overlay" id="success">
+            <div class="success-card">
+                <div class="success-icon">✅</div>
+                <h3>Payment Successful!</h3>
+                <p>Redirecting to dashboard...</p>
+                <a href="main.html" class="sub-btn primary">Go to Dashboard</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Google Maps Quick Access Section -->
+<section class="maps-section">
+    <div class="maps-container">
+        <h2>🏠 Go to Your Gym</h2>
+        <p class="maps-subtitle">Most Popular: Cult Fit Banjara Hills (User Favorite)</p>
+        
+        <div class="map-card">
+            <div class="gym-maps-icon">📍</div>
+            <h3>Cult Fit - Banjara Hills</h3>
+            <p class="gym-area">3rd Floor, Rd Number 1, Banjara Hills, Hyderabad</p>
+            
+            <a href="https://www.google.com/maps/dir/?api=1&destination=3rd+Floor+Rd+Number+1+Krishe+Amethyst+Banjara+Hills+Hyderabad+Telangana+500034" 
+               class="maps-btn maps-btn-primary" target="_blank">
+                🚗 Open in Google Maps
+            </a>
+            
+            <div class="quick-directions">
+                <a href="https://www.google.com/maps/dir/?api=1&destination=3rd+Floor+Rd+Number+1+Krishe+Amethyst+Banjara+Hills+Hyderabad+Telangana+500034&travelmode=driving" 
+                   class="maps-btn maps-btn-secondary" target="_blank">🚙 Drive</a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=3rd+Floor+Rd+Number+1+Krishe+Amethyst+Banjara+Hills+Hyderabad+Telangana+500034&travelmode=walking" 
+                   class="maps-btn maps-btn-secondary" target="_blank">🚶 Walk</a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=3rd+Floor+Rd+Number+1+Krishe+Amethyst+Banjara+Hills+Hyderabad+Telangana+500034&travelmode=transit" 
+                   class="maps-btn maps-btn-secondary" target="_blank">🚌 Public</a>
+            </div>
+        </div>
+        
+        <p class="maps-preferred">⭐ Users prefer this gym for its central location & equipment</p>
+    </div>
+</section>
+
+
+
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🏋️ EliteTracker Pro</h3>
+                <p>The ultimate single-file fitness tracking solution. Track, analyze, and achieve your goals with professional-grade tools.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Features</h3>
+                <a href="#">• Real-time Stats</a>
+                <a href="#">• Local Storage</a>
+                <a href="#">• Mobile Responsive</a>
+                <a href="#">• Zero Dependencies</a>
+                <a href="#">• Export Ready</a>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Actions</h3>
+                <a href="#tracker">• Log Workout</a>
+                <a href="#stats">• View Stats</a>
+                <a href="#gallery">• Inspiration</a>
+                <a href="#">• Clear Data</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="#">📱 Instagram</a>
+                <a href="#">🐦 Twitter</a>
+                <a href="#">💼 LinkedIn</a>
+                <a href="#">💬 Discord Community</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EliteTracker Pro. Built with ❤️ in Delhi for fitness enthusiasts worldwide. | v2.0 Complete Edition</p>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
